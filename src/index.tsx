@@ -1,28 +1,13 @@
 import { render } from "react-dom";
+import { BrowserRouter } from "react-router-dom";
 import { App } from "./App";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Link } from "react-router-dom";
-import { AboutPageAsync } from "./pages/AboutPage/AboutPage.async";
-import { MainPageAsync } from "./pages/MainPage/MainPage.async";
-import { Suspense } from "react";
+import { ThemeProvider } from "./theme/ThemeProvider";
 
 render(
 	<BrowserRouter>
-		<Link to={"/"}>Main</Link>
-		<Link to={"/about"}>About</Link>
-		<Suspense fallback={<div>Loading...</div>}>
-			<Routes>
-				<Route
-					path={"/about"}
-					element={<AboutPageAsync />}
-				/>
-				<Route
-					path={"/"}
-					element={<MainPageAsync />}
-				/>
-			</Routes>
-		</Suspense>
-		<App />
+		<ThemeProvider>
+			<App />
+		</ThemeProvider>
 	</BrowserRouter>,
 	document.getElementById("root")
 );
