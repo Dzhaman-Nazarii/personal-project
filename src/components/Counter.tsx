@@ -1,6 +1,6 @@
 import { FC } from "react";
-import "./Counte.scss";
+import css from "./Counter.module.scss";
 
 export const Counter: FC = () => {
-	return <h1>Counter</h1>;
+	return <h1 className={css.counter}>Counter</h1>;
 };
