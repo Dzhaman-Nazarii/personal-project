@@ -2,7 +2,7 @@ import { createContext, Dispatch } from "react";
 
 export enum Theme {
 	LIGHT = "light",
-	DARK = "ddark",
+	DARK = "dark",
 }
 
 export interface ThemeContextProps {
