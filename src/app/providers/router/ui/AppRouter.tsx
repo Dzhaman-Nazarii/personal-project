@@ -5,6 +5,7 @@ import { routeConfig } from "shared/config/routeConfig/routeConfig";
 export const AppRouter: FC = () => {
 	return (
 		<Suspense fallback={<div>Loading...</div>}>
+			<div className="page-wrapper">
 			<Routes>
 				{Object.values(routeConfig).map(({ element, path }) => (
 					<Route
@@ -14,6 +15,7 @@ export const AppRouter: FC = () => {
 					/>
 				))}
 			</Routes>
+			</div>
 		</Suspense>
 	);
 };

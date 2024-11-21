@@ -1,8 +1,9 @@
-import { classNames } from "shared/lib/classNames/classNames";
 import { FC } from "react";
 import { useTheme } from "./providers/ThemeProvider";
 import { AppRouter } from "./providers/router";
 import { Navbar } from "widgets/Navbar";
+import { Sidebar } from "widgets/Sidebar";
+import { classNames } from "shared/lib/classNames/classNames";
 import "./styles/index.scss";
 
 export const App: FC = () => {
@@ -10,8 +11,11 @@ export const App: FC = () => {
 
 	return (
 		<div className={classNames("app", {}, [theme])}>
-			<Navbar/>
-			<AppRouter />
+			<Navbar />
+			<div className="content-page">
+				<Sidebar />
+				<AppRouter />
+			</div>
 		</div>
 	);
 };
