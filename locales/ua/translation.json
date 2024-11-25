@@ -1,6 +1,9 @@
 {
-  "About website": "Про сайт",
-  "Language": "Українська",
-  "Main page": "Головна сторінка",
-  "Page not found": "Сторінка не знайдена"
-}
+	"About website": "Про сайт",
+	"Language": "Українська",
+	"Main page": "Головна сторінка",
+	"Page not found": "Сторінка не знайдена",
+	"Page error": "Сталася невідома помилка",
+	"Refresh page": "Refresh page"
+  }
+  
