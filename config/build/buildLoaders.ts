@@ -11,7 +11,7 @@ export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
 			options: {
 				presets: ["@babel/preset-env", "@babel/preset-typescript", "@babel/preset-react"],
 				plugins: [
-					isDev ? "react-refresh/babel" : [],
+					isDev && "react-refresh/babel",
 					[
 						"i18next-extract",
 						{
