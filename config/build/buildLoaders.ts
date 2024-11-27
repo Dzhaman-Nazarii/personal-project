@@ -1,6 +1,6 @@
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import { RuleSetRule } from "webpack";
 import { BuildOptions } from "./types/config";
+import { buildCssLoader } from "./loaders/buildCssLoader";
 
 export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
 	const babelLoader = {
@@ -9,7 +9,11 @@ export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
 		use: {
 			loader: "babel-loader",
 			options: {
-				presets: ["@babel/preset-env", "@babel/preset-typescript", "@babel/preset-react"],
+				presets: [
+					"@babel/preset-env",
+					"@babel/preset-typescript",
+					"@babel/preset-react",
+				],
 				plugins: [
 					isDev && "react-refresh/babel",
 					[
@@ -17,7 +21,8 @@ export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
 						{
 							locales: ["en", "ua"],
 							keyAsDefaultValue: true,
-							outputPath: "extractedTranslations/{{locale}}/{{ns}}.json",
+							outputPath:
+								"extractedTranslations/{{locale}}/{{ns}}.json",
 						},
 					],
 				].filter(Boolean),
@@ -35,22 +40,7 @@ export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
 		use: ["@svgr/webpack"],
 	};
 
-	const cssLoader = {
-		test: /\.s[ac]ss$/i,
-		use: [
-			isDev ? "style-loader" : MiniCssExtractPlugin.loader,
-			{
-				loader: "css-loader",
-				options: {
-					modules: {
-						auto: (resPath: string) => resPath.endsWith(".module.scss"),
-						localIdentName: isDev ? "[path][name]__[local]" : "[hash:base64:8]",
-					},
-				},
-			},
-			"sass-loader",
-		],
-	};
+	const cssLoader = buildCssLoader(isDev);
 
 	const typescriptLoader = {
 		test: /\.tsx?$/,
