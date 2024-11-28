@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { ThemeSwitcher } from "widgets/ThemeSwitcher";
 import { classNames } from "shared/lib/classNames/classNames";
 import css from "./Sidebar.module.scss";

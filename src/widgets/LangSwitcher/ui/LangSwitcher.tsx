@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import i18n from "shared/config/i18n/i18n";
 import { Button, ThemeButton } from "shared/ui/Button/Button";
 import css from "./LangSwitcher.module.scss";
+import React from "react";
 
 interface LangSwitcherProps {
 	className?: string;
