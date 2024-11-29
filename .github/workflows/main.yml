@@ -2,9 +2,9 @@ name: Testing and Building
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   pipeline:
@@ -19,13 +19,18 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
+
       - name: Install dependencies
         run: npm install
+
       - name: Build production project
         run: npm run build:prod
+
       - name: Run unit tests
         run: npm run test:unit
-      - name: build storybook
+
+      - name: Build Storybook
         run: npm run storybook:build
-      - name: screenshot testing
+
+      - name: Screenshot testing
         run: npm run test:ui:ci
