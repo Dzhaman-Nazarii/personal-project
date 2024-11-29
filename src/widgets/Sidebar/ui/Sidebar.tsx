@@ -3,7 +3,7 @@ import { ThemeSwitcher } from "widgets/ThemeSwitcher";
 import { classNames } from "shared/lib/classNames/classNames";
 import css from "./Sidebar.module.scss";
 import { LangSwitcher } from "widgets/LangSwitcher";
-import { Button, ThemeButton } from "shared/ui/Button/Button";
+import { Button, ButtonSize, ButtonTheme } from "shared/ui/Button/Button";
 
 interface SidebarProps {
 	className?: string;
@@ -23,7 +23,8 @@ export const Sidebar = ({ className }: SidebarProps) => {
 				className,
 			])}>
 			<Button
-			theme={ThemeButton.BACKGROUND_INVERTED}
+				size={ButtonSize.L}
+				theme={ButtonTheme.BACKGROUND_INVERTED}
 				className={css.collapsedBtn}
 				data-testid="sidebar-toggle"
 				onClick={onToggle}>
