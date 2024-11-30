@@ -1,16 +1,16 @@
 import { fireEvent, screen } from "@testing-library/react";
-import React, { Suspense } from "react";
+import React from "react";
 import { Sidebar } from "./Sidebar";
-import { renderWithTranslation } from "shared/lib/tests/renderWithTranslation/renderWithTranslation";
+import { ComponentRender } from "shared/lib/tests/componentRender/componentRender";
 
 describe("Sidebar", () => {
     test("renders Sidebar correctly", () => {
-        renderWithTranslation(<Suspense fallback="Loading..."><Sidebar/></Suspense>);
+        ComponentRender(<Sidebar/>)
         expect(screen.getByTestId("sidebar")).toBeInTheDocument();
     });
 
     test("toggle button", () => {
-        renderWithTranslation(<Suspense fallback="Loading..."><Sidebar/></Suspense>);
+        ComponentRender(<Sidebar/>)
         const toggleBtn = screen.getByTestId("sidebar-toggle");
         expect(screen.getByTestId("sidebar")).toBeInTheDocument();
         fireEvent.click(toggleBtn);
