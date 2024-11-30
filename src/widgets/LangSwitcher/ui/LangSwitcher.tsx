@@ -7,9 +7,10 @@ import React from "react";
 
 interface LangSwitcherProps {
 	className?: string;
+	short?: boolean;
 }
 
-export const LangSwitcher = ({ className }: LangSwitcherProps) => {
+export const LangSwitcher = ({ className, short }: LangSwitcherProps) => {
 	const { t } = useTranslation();
 
 	const onToggle = async () => {
@@ -21,7 +22,7 @@ export const LangSwitcher = ({ className }: LangSwitcherProps) => {
 			className={classNames(css.LangSwitcher, {}, [className])}
 			theme={ButtonTheme.CLEAR}
 			onClick={onToggle}>
-			{t("Language")}
+			{t(short ? "Short language" : "Language")}
 		</Button>
 	);
 };
