@@ -19,6 +19,34 @@
 	margin-left: 20px;
 }
 
+.items {
+	margin-top: 20px;
+	margin-left: 40px;
+	display: flex;
+	flex-direction: column;
+}
+
+.item {
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+}
+
+.link {
+	margin-left: 10px;
+	opacity: 1;
+}
+
+.icon {
+	fill: var(--inverted-primary-color);
+}
+
+.collapsedBtn {
+	position: absolute;
+	right: -35px;
+	bottom: 32px;
+}
+
 .collapsed {
 	width: var(--sidebar-width-collapsed);
 
@@ -29,10 +57,10 @@
 	.lang {
 		margin-left: 0;
 	}
-}
 
-.collapsedBtn {
-	position: absolute;
-	right: -35px;
-	bottom: 32px;
+	.link {
+		opacity: 0;
+		transition: 0.3s opacity;
+		width: 0px;
+	}
 }

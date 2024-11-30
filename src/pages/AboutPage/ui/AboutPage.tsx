@@ -5,7 +5,7 @@ const AboutPage: FC = () => {
 
 	const {t} = useTranslation()
 
-	return <div>{t("About website")}</div>;
+	return <div>{t("About page")}</div>;
 };
 
 export default AboutPage;
