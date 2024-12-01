@@ -12,7 +12,7 @@ export default {
     },
 } as Meta<typeof Loader>;
 
-const Template: StoryFn<typeof Loader> = (args) => <Loader {...args} />;
+const Template: StoryFn<typeof Loader> = (args: React.ComponentProps<typeof Loader>) => <Loader {...args} />;
 
 export const Light = Template.bind({});
 Light.args = {};

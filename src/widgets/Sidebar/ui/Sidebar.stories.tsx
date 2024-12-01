@@ -12,7 +12,7 @@ export default {
     },
 } as Meta<typeof Sidebar>;
 
-const Template: StoryFn<typeof Sidebar> = (args) => <Sidebar {...args} />;
+const Template: StoryFn<typeof Sidebar> = (args: React.ComponentProps<typeof Sidebar>) => <Sidebar {...args} />;
 
 export const Light = Template.bind({});
 Light.args = {};

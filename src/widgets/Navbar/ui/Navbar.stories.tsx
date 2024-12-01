@@ -12,7 +12,7 @@ export default {
     },
 } as Meta<typeof Navbar>;
 
-const Template: StoryFn<typeof Navbar> = (args) => <Navbar {...args} />;
+const Template: StoryFn<typeof Navbar> = (args: React.ComponentProps<typeof Navbar>) => <Navbar {...args} />;
 
 export const Light = Template.bind({});
 Light.args = {};

@@ -12,7 +12,7 @@ export default {
     },
 } as Meta<typeof AboutPage>;
 
-const Template: StoryFn<typeof AboutPage> = (args) => <AboutPage {...args} />;
+const Template: StoryFn<typeof AboutPage> = (args: React.ComponentProps<typeof AboutPage>) => <AboutPage {...args} />;
 
 export const Light = Template.bind({});
 Light.args = {};

@@ -12,7 +12,7 @@ export default {
     },
 } as Meta<typeof MainPage>;
 
-const Template: StoryFn<typeof MainPage> = (args) => <MainPage {...args} />;
+const Template: StoryFn<typeof MainPage> = (args: React.ComponentProps<typeof MainPage>) => <MainPage {...args} />;
 
 export const Light = Template.bind({});
 Light.args = {};

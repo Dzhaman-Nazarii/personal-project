@@ -12,7 +12,7 @@ export default {
     },
 } as Meta<typeof PageError>;
 
-const Template: StoryFn<typeof PageError> = (args) => <PageError {...args} />;
+const Template: StoryFn<typeof PageError> = (args: React.ComponentProps<typeof PageError>) => <PageError {...args} />;
 
 export const Light = Template.bind({});
 Light.args = {};

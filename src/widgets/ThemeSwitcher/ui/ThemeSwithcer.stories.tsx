@@ -12,7 +12,7 @@ export default {
     },
 } as Meta<typeof ThemeSwitcher>;
 
-const Template: StoryFn<typeof ThemeSwitcher> = (args) => <ThemeSwitcher {...args} />;
+const Template: StoryFn<typeof ThemeSwitcher> = (args: React.ComponentProps<typeof ThemeSwitcher>) => <ThemeSwitcher {...args} />;
 
 export const Light = Template.bind({});
 Light.args = {};
