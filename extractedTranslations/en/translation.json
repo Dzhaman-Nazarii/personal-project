@@ -1,18 +1,17 @@
 {
-  "": "",
-  "About page": "About page",
-  "About website": "About website",
+  "About page": "About",
+  "Authorization form": "Authorization form",
   "Decrement": "Decrement",
   "Enter name": "Enter name",
   "Enter password": "Enter password",
   "Increment": "Increment",
-  "Language": "Language",
+  "Increment:": "Increment",
+  "Language": "English",
   "Login": "Login",
-  "Main page": "Main page",
-  "Page error": "Page error",
-  "Page is not found": "Page is not found",
+  "Main page": "Main",
+  "Page error": "An unknown error occurred",
   "Page not found": "Page not found",
   "Refresh page": "Refresh page",
-  "Главная": "Главная",
-  "О сайте": "О сайте"
+  "Short language": "Eng",
+  "The login or password is incorrect": "The login or password is incorrect"
 }

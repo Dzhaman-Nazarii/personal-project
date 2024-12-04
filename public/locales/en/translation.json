@@ -10,5 +10,7 @@
 	"Increment:": "Increment",
 	"Decrement": "Decrement",
 	"Enter name": "Enter name",
-	"Enter password": "Enter password"
+	"Enter password": "Enter password",
+	"Authorization form": "Authorization form",
+	"The login or password is incorrect": "The login or password is incorrect"
 }
