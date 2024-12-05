@@ -19,7 +19,7 @@ export const LoginModal = ({ className, isOpen, onClose }: LoginModalProps) => {
 				onClose={onClose}
 				lazy
 				className={classNames(css.LoginModal, {}, [className])}>
-				<LoginFormAsync />
+				<LoginFormAsync onSuccess={onClose} />
 			</Modal>
 		</Suspense>
 	);

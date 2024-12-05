@@ -1,6 +1,5 @@
 import {
 	configureStore,
-	DeepPartial,
 	ReducersMapObject,
 } from "@reduxjs/toolkit";
 import { StateSchema } from "./StateSchema";
@@ -31,3 +30,5 @@ export function createReduxStore(
 
 	return store;
 }
+
+export type AppDispatch = ReturnType<typeof createReduxStore>["dispatch"];
