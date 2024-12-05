@@ -25,5 +25,14 @@
 			"password": "123"
 		}
 	],
-	"profile": { "name": "typicode" }
+	"profile": {
+		"first": "Nazarii",
+		"lastname": "Dzhaman",
+		"age": 20,
+		"currency": "USD",
+		"country": "Ukraine",
+		"city": "Lviv",
+		"username": "admin",
+		"avatar:": "https://img.freepik.com/premium-vector/cute-boy-smiling-cartoon-kawaii-boy-illustration-boy-avatar-happy-kid_1001605-3449.jpg?w=826"
+	}
 }
