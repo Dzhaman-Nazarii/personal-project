@@ -1,7 +1,9 @@
 {
+  "": "",
   "About page": "Про сайт",
   "Authorization form": "Форма авторизації",
   "Decrement": "Зменшити",
+  "Edit": "Edit",
   "Enter name": "Введіть ім'я",
   "Enter password": "Введіть пароль",
   "Increment": "Збільшити",
@@ -11,8 +13,12 @@
   "Main page": "Головна",
   "Page error": "Сталася невідома помилка",
   "Page not found": "Сторінка не знайдена",
+  "Profile": "Profile",
   "Profile page": "Профіль",
   "Refresh page": "Оновити сторінку",
   "Short language": "Укр",
-  "The login or password is incorrect": "Не вірний логін або пароль"
+  "The login or password is incorrect": "Не вірний логін або пароль",
+  "Your ": "Your ",
+  "Your firstname": "Your firstname",
+  "Your lastname": "Your lastname"
 }

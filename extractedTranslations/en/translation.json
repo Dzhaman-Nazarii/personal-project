@@ -1,7 +1,9 @@
 {
+  "": "",
   "About page": "About",
   "Authorization form": "Authorization form",
   "Decrement": "Decrement",
+  "Edit": "Edit",
   "Enter name": "Enter name",
   "Enter password": "Enter password",
   "Increment": "Increment",
@@ -12,8 +14,12 @@
   "Main page": "Main",
   "Page error": "An unknown error occurred",
   "Page not found": "Page not found",
+  "Profile": "Profile",
   "Profile page": "Profile",
   "Refresh page": "Refresh page",
   "Short language": "Eng",
-  "The login or password is incorrect": "The login or password is incorrect"
+  "The login or password is incorrect": "The login or password is incorrect",
+  "Your ": "Your ",
+  "Your firstname": "Your firstname",
+  "Your lastname": "Your lastname"
 }
