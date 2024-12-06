@@ -2,7 +2,6 @@ import React from 'react';
 import { StoryFn } from '@storybook/react';
 import { StateSchema, StoreProvider } from 'app/providers/StoreProvider';
 import { profileReducer } from 'entities/Profile';
-import { DeepPartial } from '@reduxjs/toolkit';
 import { ReducersList } from 'shared/lib/components/dynamicModuleLoader/DynamicModuleLoader';
 import { loginReducer } from 'features/authByUsername/model/slice/LoginSlice';
 

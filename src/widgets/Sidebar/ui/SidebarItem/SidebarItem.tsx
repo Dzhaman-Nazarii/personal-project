@@ -13,7 +13,7 @@ interface SidebarItemProps {
 export const SidebarItem = ({ item, collapsed }: SidebarItemProps) => {
 	const { t } = useTranslation();
 
-	return (
+	return item ? (
 		<AppLink
 			className={classNames(css.item, { [css.collapsed]: collapsed })}
 			theme={AppLinkTheme.SECONDARY}
@@ -21,5 +21,5 @@ export const SidebarItem = ({ item, collapsed }: SidebarItemProps) => {
 			<item.Icon className={css.icon} />
 			<span className={css.link}>{t(item.text)}</span>
 		</AppLink>
-	);
+	) : null;
 };

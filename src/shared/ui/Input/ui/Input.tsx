@@ -47,7 +47,6 @@ export const Input = memo((props: InputProps) => {
 	const onChangeHandler = (evt: ChangeEvent<HTMLInputElement>) => {
 		onChange?.(evt.target.value);
 		setCaretPosition(evt.target.value.length);
-		ref.current.focus();
 	};
 
 	const onFocusHandler = () => {
