@@ -18,7 +18,6 @@ import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { useSelector } from "react-redux";
 import css from "./ProfilePage.module.scss";
 import { ProfilePageHeader } from "./ProfilePageHeader/ProfilePageHeader";
-import { Country } from "shared/const/common";
 
 const reducers: ReducersList = {
 	profile: profileReducer,
@@ -78,17 +77,6 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
 			dispatch(
 				profileActions.updateProfile({
 					city: value || "",
-				})
-			);
-		},
-		[dispatch]
-	);
-
-	const onChangeCountry = useCallback(
-		(value?: Country) => {
-			dispatch(
-				profileActions.updateProfile({
-					country: value || Country.Ukraine,
 				})
 			);
 		},
