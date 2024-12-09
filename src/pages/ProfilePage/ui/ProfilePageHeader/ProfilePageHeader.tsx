@@ -19,16 +19,17 @@ export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
 	const readonly = useSelector(getProfileReadonly);
 
 	const onEdit = useCallback(() => {
-		dispatch(profileActions.setReadonly(false));
-	}, [dispatch]);
+        dispatch(profileActions.setReadonly(false));
+    }, [dispatch]);
 
-	const onCanceEdit = useCallback(() => {
-		dispatch(profileActions.canCancelEdit());
-	}, [dispatch]);
+    const onCancelEdit = useCallback(() => {
+        dispatch(profileActions.canCancelEdit());
+    }, [dispatch]);
 
-	const onSave = useCallback(() => {
-		dispatch(updateProfileData());
-	}, [dispatch]);
+    const onSave = useCallback(() => {
+		dispatch(profileActions.setReadonly(true));
+        dispatch(updateProfileData());
+    }, [dispatch]);
 
 	return (
 		<div className={classNames(css.ProfilePageHeader, {}, [className])}>
@@ -46,7 +47,7 @@ export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
 					<Button
 						className={css.editBtn}
 						theme={ButtonTheme.OUTLINE_RED}
-						onClick={onCanceEdit}
+						onClick={onCancelEdit}
 						>
 						{t("Cancel")}
 					</Button>
