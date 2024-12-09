@@ -1,38 +1,39 @@
 {
-	"posts": [
-		{
-			"id": "1",
-			"title": "json-server",
-			"userId": "1"
-		},
-		{
-			"id": "2",
-			"title": "json-server",
-			"userId": "2"
-		}
-	],
-	"comments": [
-		{
-			"id": "1",
-			"body": "some comment",
-			"postId": "1"
-		}
-	],
-	"users": [
-		{
-			"id": "1",
-			"username": "admin",
-			"password": "123"
-		}
-	],
-	"profile": {
-		"firstname": "Nazarii",
-		"lastname": "Dzhaman",
-		"age": 20,
-		"currency": "USD",
-		"country": "Ukraine",
-		"city": "Lviv",
-		"username": "admin",
-		"avatar:": "https://img.freepik.com/premium-vector/cute-boy-smiling-cartoon-kawaii-boy-illustration-boy-avatar-happy-kid_1001605-3449.jpg?w=826"
-	}
+  "posts": [
+    {
+      "id": "1",
+      "title": "json-server",
+      "userId": "1"
+    },
+    {
+      "id": "2",
+      "title": "json-server",
+      "userId": "2"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "body": "some comment",
+      "postId": "1"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "123"
+    }
+  ],
+  "profile": {
+    "firstname": "Nazarii",
+    "lastname": "Dzhaman",
+    "age": 20,
+    "currency": "USD",
+    "country": "Ukraine",
+    "city": "Lviv",
+    "username": "admin",
+    "avatar:": "https://img.freepik.com/premium-vector/cute-boy-smiling-cartoon-kawaii-boy-illustration-boy-avatar-happy-kid_1001605-3449.jpg?w=826",
+    "avatar": "https://img.freepik.com/premium-vector/cute-boy-smiling-cartoon-kawaii-boy-illustration-boy-avatar-happy-kid_1001605-3449.jpg?w=826"
+  }
 }

@@ -53,8 +53,8 @@ export const ProfileSlice = createSlice({
 			updateProfileData.fulfilled,
 			(state, action: PayloadAction<Profile>) => {
 				state.isLoading = false;
-				state.data = action.payload;
 				state.form = action.payload;
+				state.data = action.payload;
 			}
 		);
 		builder.addCase(updateProfileData.rejected, (state, action) => {
