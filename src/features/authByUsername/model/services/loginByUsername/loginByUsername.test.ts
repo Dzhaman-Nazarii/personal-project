@@ -1,8 +1,6 @@
-import axios from "axios";
 import { loginByUsername } from "./loginByUsername";
 import { userActions } from "entities/User";
 import { TestAsyncClass } from "shared/lib/tests/testAsyncThunk/TestAsyncThunk";
-
 
 describe("loginByUsername", () => {
 	const thunk = new TestAsyncClass(loginByUsername);
