@@ -4,6 +4,7 @@ export default {
 	globals: {
 		__IS_DEV__: true,
 		__API__: "",
+		__PROJECR: "jest"
 	},
 	clearMocks: true,
 	testEnvironment: "jsdom",

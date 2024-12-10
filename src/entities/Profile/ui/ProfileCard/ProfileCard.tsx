@@ -1,3 +1,4 @@
+import React from "react";
 import { Text, TextAlign, TextTheme } from "shared/ui/Text/Text";
 import { useTranslation } from "react-i18next";
 import { Input } from "shared/ui/Input/ui/Input";
