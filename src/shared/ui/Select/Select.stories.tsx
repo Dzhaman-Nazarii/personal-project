@@ -1,6 +1,5 @@
 import React from "react";
 import { Meta, StoryFn } from "@storybook/react";
-import AvatarImg from "../../assets/icons/avatar.jpg";
 import { Select } from "./Select";
 
 export default {
