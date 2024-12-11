@@ -14,9 +14,13 @@ import {
 } from "entities/Article/model/selectors/articleDetails";
 import { classNames } from "shared/lib/classNames/classNames";
 import css from "./ArticleDetails.module.scss";
-import { Text, TextAlign } from "shared/ui/Text/Text";
+import { Text, TextAlign, TextSize } from "shared/ui/Text/Text";
 import { useTranslation } from "react-i18next";
 import { Skeleton } from "shared/ui/Skeleton/Skeleton";
+import { Avatar } from "shared/ui/Avatar/Avatar";
+import EyeIcon from "shared/assets/icons/eye.svg";
+import CalendarIcon from "shared/assets/icons/calendar.svg";
+import { Icon } from "shared/ui/Icon/Icon";
 
 interface ArticleDetailsProps {
 	className?: string;
@@ -31,9 +35,8 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
 	const { t } = useTranslation();
 	const dispatch = useAppDispatch();
 
-	const data = useSelector(getArticleDetailsData);
-	// const isLoading = useSelector(getArticleDetailsIsLoading);
-	const isLoading = true;
+	const article = useSelector(getArticleDetailsData);
+	const isLoading = useSelector(getArticleDetailsIsLoading);
 	const error = useSelector(getArticleDetailsError);
 
 	useEffect(() => {
@@ -81,7 +84,37 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
 			/>
 		);
 	} else {
-		content = <h1>ArticleDetails</h1>;
+		content = (
+			<>
+				<div className={css.avatarWrapper}>
+					<Avatar
+						size={200}
+						src={article?.img}
+						className={css.avatar}
+					/>
+				</div>
+				<Text
+					className={css.title}
+					title={article?.title}
+					text={article?.subtitle}
+					size={TextSize.L}
+				/>
+				<div className={css.articleInfo}>
+					<Icon
+						Svg={EyeIcon}
+						className={css.icon}
+					/>
+					<Text title={String(article?.views)} />
+				</div>
+				<div className={css.articleInfo}>
+					<Icon
+						Svg={CalendarIcon}
+						className={css.icon}
+					/>
+					<Text title={article?.createdAt} />
+				</div>
+			</>
+		);
 	}
 
 	return (
