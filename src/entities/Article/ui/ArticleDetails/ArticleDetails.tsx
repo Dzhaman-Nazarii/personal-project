@@ -3,7 +3,7 @@ import {
 	ReducersList,
 } from "shared/lib/components/dynamicModuleLoader/DynamicModuleLoader";
 import { articleDetailsReducer } from "../../model/slice/ArticleDetailsSlice";
-import { memo, useEffect } from "react";
+import { memo, useCallback, useEffect } from "react";
 import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { fetchArticleById } from "../../model/services/fetchArticleById/fetchArticleById";
 import { useSelector } from "react-redux";
@@ -21,6 +21,10 @@ import { Avatar } from "shared/ui/Avatar/Avatar";
 import EyeIcon from "shared/assets/icons/eye.svg";
 import CalendarIcon from "shared/assets/icons/calendar.svg";
 import { Icon } from "shared/ui/Icon/Icon";
+import { ArticleBlock, ArticleBlockType } from "../../model/types/articles";
+import { ArticleCodeBlockComponent } from "../ArticleCodeBlockComponent/ArticleCodeBlockComponent";
+import { ArticleImageBlockComponent } from "../ArticleImageBlockComponent/ArticleImageBlockComponent";
+import { ArticleTextBlockComponent } from "../ArticleTextBlockComponent/ArticleTextBlockComponent";
 
 interface ArticleDetailsProps {
 	className?: string;
@@ -38,6 +42,34 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
 	const article = useSelector(getArticleDetailsData);
 	const isLoading = useSelector(getArticleDetailsIsLoading);
 	const error = useSelector(getArticleDetailsError);
+
+	const blockContent = useCallback((block: ArticleBlock) => {
+		switch (block.type) {
+			case ArticleBlockType.CODE:
+				return (
+					<ArticleCodeBlockComponent
+						block={block}
+						className={css.block}
+					/>
+				);
+			case ArticleBlockType.IMAGE:
+				return (
+					<ArticleImageBlockComponent
+						block={block}
+						className={css.block}
+					/>
+				);
+			case ArticleBlockType.TEXT:
+				return (
+					<ArticleTextBlockComponent
+						block={block}
+						className={css.block}
+					/>
+				);
+			default:
+				return null;
+		}
+	}, []);
 
 	useEffect(() => {
 		dispatch(fetchArticleById(id));
@@ -113,6 +145,9 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
 					/>
 					<Text title={article?.createdAt} />
 				</div>
+				{article?.blocks.map((block) => (
+					<div key={block.id}>{blockContent(block)}</div>
+				))}
 			</>
 		);
 	}
