@@ -1,9 +1,9 @@
-import { classNames } from "shared/lib/classNames/classNames";
-import css from "./ArticleTextBlockComponent.module.scss";
-import { memo } from "react";
+import React, { memo } from "react";
 import { ArticleTextBlock } from "entities/Article/model/types/articles";
 import { Text } from "shared/ui/Text/Text";
 import { title } from "process";
+import { classNames } from "shared/lib/classNames/classNames";
+import css from "./ArticleTextBlockComponent.module.scss";
 
 interface ArticleTextBlockComponentProps {
 	className?: string;

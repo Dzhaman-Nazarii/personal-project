@@ -1,5 +1,5 @@
+import React, { memo } from "react";
 import { useTranslation } from "react-i18next";
-import { memo } from "react";
 import { ArticleDetails } from "entities/Article";
 import { useParams } from "react-router-dom";
 import { classNames } from "shared/lib/classNames/classNames";
@@ -8,13 +8,15 @@ import { Text } from "shared/ui/Text/Text";
 
 interface ArticleDetailsPageProps {
 	className?: string;
+	id?: string;
 }
 
-const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
+const ArticleDetailsPage = ({ className, id }: ArticleDetailsPageProps) => {
 	const { t } = useTranslation();
-	const { id } = useParams<{ id: string }>();
+	const params = useParams<{ id: string }>();
+	const articleId = id || params?.id;
 
-	if (!id) {
+	if (!articleId) {
 		return (
 			<div
 				className={classNames(css.ArticleDetailsPage, {}, [className])}>
@@ -25,7 +27,7 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
 
 	return (
 		<div className={classNames(css.ArticleDetailsPage, {}, [className])}>
-			<ArticleDetails id={id} />
+			<ArticleDetails id={articleId} />
 		</div>
 	);
 };

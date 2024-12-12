@@ -1,9 +1,9 @@
+import React, { memo, useCallback, useEffect } from "react";
 import {
 	DynamicModuleLoader,
 	ReducersList,
 } from "shared/lib/components/dynamicModuleLoader/DynamicModuleLoader";
 import { articleDetailsReducer } from "../../model/slice/ArticleDetailsSlice";
-import { memo, useCallback, useEffect } from "react";
 import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { fetchArticleById } from "../../model/services/fetchArticleById/fetchArticleById";
 import { useSelector } from "react-redux";
@@ -12,8 +12,6 @@ import {
 	getArticleDetailsError,
 	getArticleDetailsIsLoading,
 } from "entities/Article/model/selectors/articleDetails";
-import { classNames } from "shared/lib/classNames/classNames";
-import css from "./ArticleDetails.module.scss";
 import { Text, TextAlign, TextSize } from "shared/ui/Text/Text";
 import { useTranslation } from "react-i18next";
 import { Skeleton } from "shared/ui/Skeleton/Skeleton";
@@ -25,6 +23,8 @@ import { ArticleBlock, ArticleBlockType } from "../../model/types/articles";
 import { ArticleCodeBlockComponent } from "../ArticleCodeBlockComponent/ArticleCodeBlockComponent";
 import { ArticleImageBlockComponent } from "../ArticleImageBlockComponent/ArticleImageBlockComponent";
 import { ArticleTextBlockComponent } from "../ArticleTextBlockComponent/ArticleTextBlockComponent";
+import { classNames } from "shared/lib/classNames/classNames";
+import css from "./ArticleDetails.module.scss";
 
 interface ArticleDetailsProps {
 	className?: string;
@@ -49,6 +49,7 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
 				return (
 					<ArticleCodeBlockComponent
 						block={block}
+						key={block.id}
 						className={css.block}
 					/>
 				);
@@ -56,6 +57,7 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
 				return (
 					<ArticleImageBlockComponent
 						block={block}
+						key={block.id}
 						className={css.block}
 					/>
 				);
@@ -63,6 +65,7 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
 				return (
 					<ArticleTextBlockComponent
 						block={block}
+						key={block.id}
 						className={css.block}
 					/>
 				);
@@ -72,9 +75,10 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
 	}, []);
 
 	useEffect(() => {
-		dispatch(fetchArticleById(id));
+		if (__PROJECT__ !== "storybook") {
+			dispatch(fetchArticleById(id));
+		}
 	}, [dispatch, id]);
-
 	let content;
 
 	if (isLoading) {

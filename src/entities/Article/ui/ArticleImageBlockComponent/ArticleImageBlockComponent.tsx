@@ -1,4 +1,4 @@
-import { memo } from "react";
+import React, { memo } from "react";
 import { ArticleImageBlock } from "../../model/types/articles";
 import { Text, TextAlign } from "shared/ui/Text/Text";
 import { classNames } from "shared/lib/classNames/classNames";
