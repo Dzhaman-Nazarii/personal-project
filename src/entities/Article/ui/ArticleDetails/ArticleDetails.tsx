@@ -79,6 +79,7 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
 			dispatch(fetchArticleById(id));
 		}
 	}, [dispatch, id]);
+
 	let content;
 
 	if (isLoading) {

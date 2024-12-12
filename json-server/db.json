@@ -70,13 +70,15 @@
 			"id": "1",
 			"username": "admin",
 			"password": "123",
-			"role": "ADMIN"
+			"role": "ADMIN",
+			"avatar": "https://img.freepik.com/premium-vector/cute-boy-smiling-cartoon-kawaii-boy-illustration-boy-avatar-happy-kid_1001605-3449.jpg?w=826"
 		},
 		{
 			"id": "2",
 			"username": "user",
 			"password": "123",
-			"role": "USER"
+			"role": "USER",
+			"avatar": "https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745"
 		}
 	],
 	"profile": {
