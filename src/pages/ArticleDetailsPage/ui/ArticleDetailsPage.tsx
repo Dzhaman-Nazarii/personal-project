@@ -18,6 +18,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getArticleCommentsIsLoading } from "../model/selectors/comments";
 import { useInitialEffect } from "shared/lib/hooks/useInitialEffect/useInitialEffect";
 import { fetchArticleById } from "entities/Article/model/services/fetchArticleById/fetchArticleById";
+import { fetchCommentsByArticleId } from "../model/services/fetchCommentsByArticleId";
 
 interface ArticleDetailsPageProps {
 	className?: string;
@@ -35,9 +36,7 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
 	const commentsIsLoading = useSelector(getArticleCommentsIsLoading);
 
 	useInitialEffect(() => {
-		if (id) {
-			dispatch(fetchArticleById(id));
-		}
+			dispatch(fetchCommentsByArticleId(id));
 	});
 
 	if (!id) {
@@ -52,7 +51,7 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
 	return (
 		<DynamicModuleLoader
 			reducers={reducers}
-			removeAfterUnmount>
+			removeAfterUnmount={true}>
 			<div
 				className={classNames(css.ArticleDetailsPage, {}, [className])}>
 				<ArticleDetails id={id} />

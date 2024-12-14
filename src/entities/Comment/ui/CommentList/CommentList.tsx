@@ -1,6 +1,6 @@
 import { classNames } from "shared/lib/classNames/classNames";
 import css from "./CommentList.module.scss";
-import { Comment } from "entities/Comment/model/types/comments";
+import { Comment } from "entities/Comment/model/types/comment";
 import { Text } from "shared/ui/Text/Text";
 import { useTranslation } from "react-i18next";
 import { CommentCard } from "../CommentCard/CommentCard";
@@ -18,7 +18,14 @@ export const CommentList = (props: CommentListProps) => {
 	return (
 		<div className={classNames(css.CommentList, {}, [className])}>
 			{comments?.length ? (
-				comments.map((comment) => <CommentCard key={comment.id} isLoading={isLoading} comment={comment} className={css.comment} />)
+				comments.map((comment) => (
+					<CommentCard
+						key={comment.id}
+						isLoading={isLoading}
+						comment={comment}
+						className={css.comment}
+					/>
+				))
 			) : (
 				<Text title={t("No comments")} />
 			)}

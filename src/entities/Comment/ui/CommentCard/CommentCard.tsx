@@ -1,6 +1,6 @@
 import { classNames } from "shared/lib/classNames/classNames";
 import css from "./CommentCard.module.scss";
-import { Comment } from "entities/Comment/model/types/comments";
+import { Comment } from "entities/Comment/model/types/comment";
 import { Avatar } from "shared/ui/Avatar/Avatar";
 import { Text } from "shared/ui/Text/Text";
 import { Skeleton } from "shared/ui/Skeleton/Skeleton";
@@ -30,7 +30,7 @@ export const CommentCard = (props: CommentCardProps) => {
 					/>
 				</div>
 				<Skeleton
-				className={css.text}
+					className={css.text}
 					width="100%"
 					height={50}
 				/>

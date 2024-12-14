@@ -25,6 +25,7 @@ import { ArticleImageBlockComponent } from "../ArticleImageBlockComponent/Articl
 import { ArticleTextBlockComponent } from "../ArticleTextBlockComponent/ArticleTextBlockComponent";
 import { classNames } from "shared/lib/classNames/classNames";
 import css from "./ArticleDetails.module.scss";
+import { useInitialEffect } from "shared/lib/hooks/useInitialEffect/useInitialEffect";
 
 interface ArticleDetailsProps {
 	className?: string;
@@ -74,11 +75,9 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
 		}
 	}, []);
 
-	useEffect(() => {
-		if (__PROJECT__ !== "storybook") {
-			dispatch(fetchArticleById(id));
-		}
-	}, [dispatch, id]);
+	useInitialEffect(() => {
+				dispatch(fetchArticleById(id));
+		});
 
 	let content;
 

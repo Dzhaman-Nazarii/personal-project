@@ -14,12 +14,15 @@ export const fetchCommentsByArticleId = createAsyncThunk<
 				_expand: "user",
 			},
 		});
-		if(!articleId) {
+
+		if (!articleId) {
 			return thunkApi.rejectWithValue("Error");
 		}
+
 		if (!response.data) {
 			throw new Error();
 		}
+		
 		return response.data;
 	} catch (error) {
 		return thunkApi.rejectWithValue("Error");
