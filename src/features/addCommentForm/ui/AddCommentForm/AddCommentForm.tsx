@@ -8,7 +8,7 @@ import {
 	getAddCommentFormError,
 	getAddCommentFormText,
 } from "../../model/selectors/AddCommentFormSelectors";
-import { useCallback } from "react";
+import React, { useCallback } from "react";
 import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
 import {
 	addCommentFormActions,

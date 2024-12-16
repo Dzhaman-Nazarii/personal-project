@@ -53,5 +53,5 @@ Dark.decorators = [
 			},
 		},
 	}),
-	ThemeDecorator(Theme.DARK)
+	ThemeDecorator(Theme.DARK),
 ];
