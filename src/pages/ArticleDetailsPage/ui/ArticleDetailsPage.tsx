@@ -1,7 +1,7 @@
 import React, { memo, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { ArticleDetails } from "entities/Article";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { classNames } from "shared/lib/classNames/classNames";
 import css from "./ArticleDetailsPage.module.scss";
 import { Text } from "shared/ui/Text/Text";
@@ -20,6 +20,8 @@ import { useInitialEffect } from "shared/lib/hooks/useInitialEffect/useInitialEf
 import { fetchCommentsByArticleId } from "../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId";
 import { AddCommentForm } from "features/addCommentForm";
 import { addCommentForArticle } from "../model/services/addCommentForArticle/addCommentForArticle";
+import { Button } from "shared/ui/Button/Button";
+import { RoutePath } from "shared/config/routeConfig/routeConfig";
 
 interface ArticleDetailsPageProps {
 	className?: string;
@@ -35,6 +37,7 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
 	const { id } = useParams<{ id: string }>();
 	const comments = useSelector(getArticleComments.selectAll);
 	const commentsIsLoading = useSelector(getArticleCommentsIsLoading);
+	const navigate = useNavigate();
 
 	const onSendComment = useCallback(
 		(text: string) => {
@@ -46,6 +49,10 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
 	useInitialEffect(() => {
 		dispatch(fetchCommentsByArticleId(id));
 	});
+
+	const onBackToList = useCallback(() => {
+		navigate(RoutePath.articles);
+	}, [navigate]);
 
 	if (!id) {
 		return (
@@ -62,6 +69,7 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
 			removeAfterUnmount={true}>
 			<div
 				className={classNames(css.ArticleDetailsPage, {}, [className])}>
+				<Button onClick={onBackToList}>{t("Back to list")}</Button>
 				<ArticleDetails id={id} />
 				<Text
 					title={t("Comments")}

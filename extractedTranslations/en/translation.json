@@ -5,6 +5,7 @@
   "Article not found": "Article not found",
   "Articles Page": "Articles Page",
   "Authorization form": "Authorization form",
+  "Back to list": "Back to list",
   "Cancel": "Cancel",
   "Co": "Co",
   "Comments": "Comments",
@@ -34,6 +35,14 @@
   "Page not found": "Page not found",
   "Profile": "Profile",
   "Profile page": "Profile",
+  "Read": "Read",
+  "Read more": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
   "Refresh page": "Refresh page",
   "Save": "Save",
   "Select a ": "Select a ",

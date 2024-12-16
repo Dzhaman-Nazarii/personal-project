@@ -5,6 +5,7 @@
   "Article not found": "Article not found",
   "Articles Page": "Articles Page",
   "Authorization form": "Форма авторизації",
+  "Back to list": "Back to list",
   "Cancel": "Cancel",
   "Co": "Co",
   "Comments": "Comments",
@@ -33,6 +34,14 @@
   "Page not found": "Сторінка не знайдена",
   "Profile": "Profile",
   "Profile page": "Профіль",
+  "Read": "Read",
+  "Read more": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
   "Refresh page": "Оновити сторінку",
   "Save": "Save",
   "Select a ": "Select a ",
