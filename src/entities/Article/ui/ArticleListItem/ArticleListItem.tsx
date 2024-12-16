@@ -15,7 +15,7 @@ import { Button, ButtonTheme } from "shared/ui/Button/Button";
 import { useTranslation } from "react-i18next";
 import { ArticleTextBlockComponent } from "../ArticleTextBlockComponent/ArticleTextBlockComponent";
 import { useNavigate } from "react-router-dom";
-import { useCallback } from "react";
+import React, { useCallback } from "react";
 import { RoutePath } from "shared/config/routeConfig/routeConfig";
 
 interface ArticleListItemProps {

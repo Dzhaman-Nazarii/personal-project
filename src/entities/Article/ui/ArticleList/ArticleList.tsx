@@ -1,8 +1,9 @@
-import { classNames } from "shared/lib/classNames/classNames";
-import css from "./ArticleList.module.scss";
+import React from "react";
 import { Article, ArticleView } from "../../model/types/articles";
 import { ArticleListItem } from "../ArticleListItem/ArticleListItem";
 import { ArticleListItemSkeleton } from "../ArticleListItem/ArticleListItemSkeleton";
+import { classNames } from "shared/lib/classNames/classNames";
+import css from "./ArticleList.module.scss";
 
 interface ArticleListProps {
 	className?: string;
