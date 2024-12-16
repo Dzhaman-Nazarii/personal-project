@@ -68,27 +68,41 @@
 	"users": [
 		{
 			"id": "1",
-			"username": "admin",
+			"username": "Nazik",
 			"password": "123",
 			"role": "ADMIN",
 			"avatar": "https://img.freepik.com/premium-vector/cute-boy-smiling-cartoon-kawaii-boy-illustration-boy-avatar-happy-kid_1001605-3449.jpg?w=826"
 		},
 		{
 			"id": "2",
-			"username": "user",
+			"username": "Katerynka",
 			"password": "123",
 			"role": "USER",
 			"avatar": "https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745"
 		}
 	],
-	"profile": {
-		"firstname": "Nazarii",
-		"lastname": "Dzhaman",
-		"age": 20,
-		"currency": "UAH",
-		"country": "Ukraine",
-		"city": "Lviv",
-		"username": "admin",
-		"avatar": "https://img.freepik.com/premium-vector/cute-boy-smiling-cartoon-kawaii-boy-illustration-boy-avatar-happy-kid_1001605-3449.jpg?w=826"
-	}
+	"profile": [
+		{
+			"id": "1",
+			"firstname": "Nazarii",
+			"lastname": "Dzhaman",
+			"age": 20,
+			"currency": "UAH",
+			"country": "Ukraine",
+			"city": "Lviv",
+			"username": "Nazik",
+			"avatar": "https://img.freepik.com/premium-vector/cute-boy-smiling-cartoon-kawaii-boy-illustration-boy-avatar-happy-kid_1001605-3449.jpg?w=826"
+		},
+		{
+			"id": "2",
+			"firstname": "Kateryna",
+			"lastname": "Belma",
+			"age": 18,
+			"currency": "UAH",
+			"country": "Ukraine",
+			"city": "Lviv",
+			"username": "Katerynka",
+			"avatar": "https://cdn-icons-png.flaticon.com/512/2335/2335114.png"
+		}
+	]
 }
