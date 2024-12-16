@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React, { memo, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { ArticleDetails } from "entities/Article";
 import { useParams } from "react-router-dom";
@@ -17,8 +17,9 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { getArticleCommentsIsLoading } from "../model/selectors/comments";
 import { useInitialEffect } from "shared/lib/hooks/useInitialEffect/useInitialEffect";
-import { fetchArticleById } from "entities/Article/model/services/fetchArticleById/fetchArticleById";
-import { fetchCommentsByArticleId } from "../model/services/fetchCommentsByArticleId";
+import { fetchCommentsByArticleId } from "../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId";
+import { AddCommentForm } from "features/addCommentForm";
+import { addCommentForArticle } from "../model/services/addCommentForArticle/addCommentForArticle";
 
 interface ArticleDetailsPageProps {
 	className?: string;
@@ -35,8 +36,15 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
 	const comments = useSelector(getArticleComments.selectAll);
 	const commentsIsLoading = useSelector(getArticleCommentsIsLoading);
 
+	const onSendComment = useCallback(
+		(text: string) => {
+			dispatch(addCommentForArticle(text));
+		},
+		[dispatch]
+	);
+
 	useInitialEffect(() => {
-			dispatch(fetchCommentsByArticleId(id));
+		dispatch(fetchCommentsByArticleId(id));
 	});
 
 	if (!id) {
@@ -59,6 +67,7 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
 					title={t("Comments")}
 					className={css.commentTitle}
 				/>
+				<AddCommentForm onSendComment={onSendComment} />
 				<CommentList
 					comments={comments}
 					isLoading={commentsIsLoading}
