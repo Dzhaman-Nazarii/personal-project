@@ -4,6 +4,8 @@ import { Comment } from "entities/Comment/model/types/comment";
 import { Avatar } from "shared/ui/Avatar/Avatar";
 import { Text } from "shared/ui/Text/Text";
 import { Skeleton } from "shared/ui/Skeleton/Skeleton";
+import { AppLink } from "shared/ui/AppLink/AppLink";
+import { RoutePath } from "shared/config/routeConfig/routeConfig";
 
 interface CommentCardProps {
 	className?: string;
@@ -40,7 +42,7 @@ export const CommentCard = (props: CommentCardProps) => {
 
 	return (
 		<div className={classNames(css.CommentCard, {}, [className])}>
-			<div className={css.header}>
+			<AppLink to={`${RoutePath.profile}${comment.user.id}`} className={css.header}>
 				{comment.user.avatar ? (
 					<Avatar
 						src={comment.user.avatar}
@@ -51,7 +53,7 @@ export const CommentCard = (props: CommentCardProps) => {
 					title={comment.user.username}
 					className={css.username}
 				/>
-			</div>
+			</AppLink>
 			<Text
 				text={comment.text}
 				className={css.text}
