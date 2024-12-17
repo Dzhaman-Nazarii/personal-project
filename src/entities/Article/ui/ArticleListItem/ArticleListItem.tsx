@@ -26,13 +26,12 @@ interface ArticleListItemProps {
 
 export const ArticleListItem = (props: ArticleListItemProps) => {
 	const { className, article, view } = props;
-	console.log(view);
 	const { t } = useTranslation();
 	const navigate = useNavigate();
 
-	const onOpenArticle = useCallback(()=>{
-		navigate(RoutePath.article_details + article.id)
-	},[navigate, article.id])
+	const onOpenArticle = useCallback(() => {
+		navigate(RoutePath.article_details + article.id);
+	}, [navigate, article.id]);
 
 	if (view === ArticleView.BIG) {
 		let textBlock = article.blocks.find(
@@ -73,10 +72,15 @@ export const ArticleListItem = (props: ArticleListItemProps) => {
 						className={css.img}
 					/>
 					{textBlock && (
-						<ArticleTextBlockComponent block={textBlock} className={css.textBlock} />
+						<ArticleTextBlockComponent
+							block={textBlock}
+							className={css.textBlock}
+						/>
 					)}
 					<div className={css.footer}>
-						<Button onClick={onOpenArticle} theme={ButtonTheme.OUTLINE}>
+						<Button
+							onClick={onOpenArticle}
+							theme={ButtonTheme.OUTLINE}>
 							{t("Read more...")}
 						</Button>
 						<Text
@@ -95,7 +99,9 @@ export const ArticleListItem = (props: ArticleListItemProps) => {
 				className,
 				css[view],
 			])}>
-			<Card className={css.card} onClick={onOpenArticle}>
+			<Card
+				className={css.card}
+				onClick={onOpenArticle}>
 				<div className={css.imageWrapper}>
 					<img
 						src={article.img}
