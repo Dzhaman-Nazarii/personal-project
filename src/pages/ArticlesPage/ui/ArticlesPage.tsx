@@ -21,7 +21,7 @@ import {
 	getArticles,
 } from "../model/slices/articlesPageSlice";
 import { ArticleViewSelector } from "features/ArticleViewSelector";
-import { Page } from "shared/ui/Page/Page";
+import { Page } from "widgets/Page/Page";
 import { fetchNextArticlesPage } from "../model/services/fetchNextArticlePage/fetchNextArticlePage";
 import { Text } from "shared/ui/Text/Text";
 import { initArticlesPage } from "../model/services/initArticlesPage/initArticlesPage";
