@@ -12,7 +12,9 @@ import { fetchArticlesList } from "../model/services/fetchArticlesList/fetchArti
 import { useSelector } from "react-redux";
 import {
 	getArticlesPageError,
+	getArticlesPageHasMore,
 	getArticlesPageIsLoading,
+	getArticlesPageNum,
 	getArticlesPageView,
 } from "../model/selectors/articlesPageSelector";
 import {
@@ -23,6 +25,9 @@ import {
 import { classNames } from "shared/lib/classNames/classNames";
 import css from "./ArticlesPage.module.scss";
 import { ArticleViewSelector } from "features/ArticleViewSelector";
+import { Page } from "shared/ui/Page/Page";
+import { fetchNextArticlesPage } from "../model/services/fetchNextArticlePage/fetchNextArticlePage";
+import { Text } from "shared/ui/Text/Text";
 
 interface ArticlesPageProps {
 	className?: string;
@@ -38,22 +43,38 @@ export const ArticlesPage = ({ className }: ArticlesPageProps) => {
 	const isLoading = useSelector(getArticlesPageIsLoading);
 	const error = useSelector(getArticlesPageError);
 	const view = useSelector(getArticlesPageView);
-
-	useInitialEffect(() => {
-		dispatch(fetchArticlesList());
-		dispatch(articlesPageActions.initState());
-	});
+	const page = useSelector(getArticlesPageNum);
+	const hasMore = useSelector(getArticlesPageHasMore);
 
 	const onChangeView = useCallback(
 		(view: ArticleView) => {
 			dispatch(articlesPageActions.setView(view));
 		},
-		[dispatch]
+		[dispatch, page]
 	);
+
+	const onLoadNextPart = useCallback(() => {
+		dispatch(fetchNextArticlesPage());
+	}, [dispatch]);
+
+	useInitialEffect(() => {
+		dispatch(articlesPageActions.initState());
+		dispatch(
+			fetchArticlesList({
+				page: 1,
+			})
+		);
+	});
+
+	if (error) {
+		return <Text text="Something went wrong" />;
+	}
 
 	return (
 		<DynamicModuleLoader reducers={reducers}>
-			<div className={classNames(css.ArticlesPage, {}, [className])}>
+			<Page
+				onScrollEnd={onLoadNextPart}
+				className={classNames(css.ArticlesPage, {}, [className])}>
 				<ArticleViewSelector
 					view={view}
 					onViewClick={onChangeView}
@@ -63,7 +84,7 @@ export const ArticlesPage = ({ className }: ArticlesPageProps) => {
 					view={view}
 					articles={articles}
 				/>
-			</div>
+			</Page>
 		</DynamicModuleLoader>
 	);
 };
