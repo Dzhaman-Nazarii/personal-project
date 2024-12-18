@@ -8,11 +8,9 @@ import {
 
 import { useInitialEffect } from "shared/lib/hooks/useInitialEffect/useInitialEffect";
 import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
-import { fetchArticlesList } from "../model/services/fetchArticlesList/fetchArticlesList";
 import { useSelector } from "react-redux";
 import {
 	getArticlesPageError,
-	getArticlesPageHasMore,
 	getArticlesPageIsLoading,
 	getArticlesPageNum,
 	getArticlesPageView,
@@ -22,12 +20,13 @@ import {
 	articlesPageReducer,
 	getArticles,
 } from "../model/slices/articlesPageSlice";
-import { classNames } from "shared/lib/classNames/classNames";
-import css from "./ArticlesPage.module.scss";
 import { ArticleViewSelector } from "features/ArticleViewSelector";
 import { Page } from "shared/ui/Page/Page";
 import { fetchNextArticlesPage } from "../model/services/fetchNextArticlePage/fetchNextArticlePage";
 import { Text } from "shared/ui/Text/Text";
+import { initArticlesPage } from "../model/services/initArticlesPage/initArticlesPage";
+import { classNames } from "shared/lib/classNames/classNames";
+import css from "./ArticlesPage.module.scss";
 
 interface ArticlesPageProps {
 	className?: string;
@@ -44,7 +43,6 @@ export const ArticlesPage = ({ className }: ArticlesPageProps) => {
 	const error = useSelector(getArticlesPageError);
 	const view = useSelector(getArticlesPageView);
 	const page = useSelector(getArticlesPageNum);
-	const hasMore = useSelector(getArticlesPageHasMore);
 
 	const onChangeView = useCallback(
 		(view: ArticleView) => {
@@ -58,12 +56,7 @@ export const ArticlesPage = ({ className }: ArticlesPageProps) => {
 	}, [dispatch]);
 
 	useInitialEffect(() => {
-		dispatch(articlesPageActions.initState());
-		dispatch(
-			fetchArticlesList({
-				page: 1,
-			})
-		);
+		dispatch(initArticlesPage());
 	});
 
 	if (error) {
@@ -71,7 +64,9 @@ export const ArticlesPage = ({ className }: ArticlesPageProps) => {
 	}
 
 	return (
-		<DynamicModuleLoader reducers={reducers}>
+		<DynamicModuleLoader
+			reducers={reducers}
+			removeAfterUnmount={false}>
 			<Page
 				onScrollEnd={onLoadNextPart}
 				className={classNames(css.ArticlesPage, {}, [className])}>

@@ -27,8 +27,7 @@ export interface AddCommentFormProps {
 const AddCommentForm = ({ className, onSendComment }: AddCommentFormProps) => {
 	const { t } = useTranslation();
 	const dispatch = useAppDispatch();
-	const text = useSelector(getAddCommentFormText);
-	const error = useSelector(getAddCommentFormError);
+	const text = useSelector(getAddCommentFormText) || "";
 
 	const reducers: ReducersList = {
 		addCommentForm: addCommentFormReducer,
@@ -41,11 +40,10 @@ const AddCommentForm = ({ className, onSendComment }: AddCommentFormProps) => {
 		[dispatch]
 	);
 
-	const onSendHandler = useCallback(()=>{
-		onSendComment(text || "");
+	const onSendHandler = useCallback(() => {
+		onSendComment(text.trim());
 		onCommentTextChange("");
-
-	},[onSendComment, onCommentTextChange, text])
+	}, [onSendComment, onCommentTextChange, text]);
 
 	return (
 		<DynamicModuleLoader reducers={reducers}>
