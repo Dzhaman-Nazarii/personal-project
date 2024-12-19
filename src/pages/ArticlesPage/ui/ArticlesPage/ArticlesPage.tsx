@@ -1,6 +1,5 @@
 import { memo, useCallback } from "react";
 import { ArticleList } from "entities/Article/ui/ArticleList/ArticleList";
-import { ArticleView } from "entities/Article/model/types/articles";
 import {
 	DynamicModuleLoader,
 	ReducersList,
@@ -12,20 +11,18 @@ import { useSelector } from "react-redux";
 import {
 	getArticlesPageError,
 	getArticlesPageIsLoading,
-	getArticlesPageNum,
 	getArticlesPageView,
 } from "../../model/selectors/articlesPageSelector";
 import {
-	articlesPageActions,
 	articlesPageReducer,
 	getArticles,
 } from "../../model/slices/articlesPageSlice";
-import { ArticleViewSelector } from "features/ArticleViewSelector";
 import { Page } from "widgets/Page/Page";
 import { fetchNextArticlesPage } from "../../model/services/fetchNextArticlePage/fetchNextArticlePage";
 import { Text } from "shared/ui/Text/Text";
 import { initArticlesPage } from "../../model/services/initArticlesPage/initArticlesPage";
 import { classNames } from "shared/lib/classNames/classNames";
+import { useSearchParams } from "react-router-dom";
 import css from "./ArticlesPage.module.scss";
 import { ArticlesPageFilters } from "../ArticlesPageFilters/ArticlesPageFilters";
 
@@ -44,12 +41,14 @@ export const ArticlesPage = ({ className }: ArticlesPageProps) => {
 	const error = useSelector(getArticlesPageError);
 	const view = useSelector(getArticlesPageView);
 
+	let [searcParams] = useSearchParams();
+
 	const onLoadNextPart = useCallback(() => {
 		dispatch(fetchNextArticlesPage());
 	}, [dispatch]);
 
 	useInitialEffect(() => {
-		dispatch(initArticlesPage());
+		dispatch(initArticlesPage(searcParams));
 	});
 
 	if (error) {
