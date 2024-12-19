@@ -6,12 +6,10 @@ import { RoutePath } from "shared/config/routeConfig/routeConfig";
 import { createSelector } from "@reduxjs/toolkit";
 import { SidebarItemType } from "../types/sidebar";
 import { getUserAuthData } from "entities/User";
-import { useTranslation } from "react-i18next";
 
 export const getSidebarItems = createSelector(
     getUserAuthData,
     (userData) => {
-        const {t} = useTranslation();
         const sidebarItemsList: SidebarItemType[] = [
             {
                 path: RoutePath.main,
