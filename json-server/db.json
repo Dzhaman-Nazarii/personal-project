@@ -40,7 +40,7 @@
 			"img": "https://bcp.cdnchinhphu.vn/344443456812359680/2024/6/27/ptbv-17194785714181041182049.jpg",
 			"views": 1030,
 			"createdAt": "25.09.2023",
-			"userId": "2",
+			"userId": "1",
 			"type": ["Business", "Environment"],
 			"blocks": [
 				{
@@ -51,12 +51,6 @@
 						"Companies are prioritizing sustainability by reducing carbon emissions.",
 						"Renewable energy sources and eco-friendly practices are driving modern business."
 					]
-				},
-				{
-					"id": "2",
-					"type": "IMAGE",
-					"src": "https://u4d2z7k9.rocketcdn.me/wp-content/uploads/2023/07/Untitled-683-%C3%97-1024px-1024-%C3%97-683px-2023-07-12T154605.688.jpg",
-					"title": "Renewable Energy Use"
 				}
 			]
 		},
@@ -78,11 +72,6 @@
 						"Artificial Intelligence helps doctors detect diseases at early stages.",
 						"Machine learning models are improving accuracy in diagnostics."
 					]
-				},
-				{
-					"id": "2",
-					"type": "CODE",
-					"code": "const analyzeImage = (img) => {\n  return AIModel.predict(img);\n};"
 				}
 			]
 		},
@@ -93,7 +82,7 @@
 			"img": "https://i.ytimg.com/vi/OCzzN8VZgfY/maxresdefault.jpg",
 			"views": 870,
 			"createdAt": "22.08.2023",
-			"userId": "2",
+			"userId": "1",
 			"type": ["Travel", "Lifestyle"],
 			"blocks": [
 				{
@@ -104,618 +93,111 @@
 						"Travel in 2024 focuses on sustainable tourism and cultural experiences.",
 						"Hidden destinations in Asia and South America are gaining popularity."
 					]
-				},
-				{
-					"id": "2",
-					"type": "IMAGE",
-					"src": "https://www.forumdaily.com/wp-content/uploads/2021/09/shutterstock_648072241.jpg",
-					"title": "Tropical Paradise"
 				}
 			]
 		},
 		{
 			"id": "5",
-			"title": "The Rise of JavaScript Frameworks",
-			"subtitle": "What changed in JS in 2024?",
-			"img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-			"views": 1450,
-			"createdAt": "12.10.2023",
-			"userId": "1",
-			"type": ["Technology"],
+			"title": "The Future of Space Exploration",
+			"subtitle": "What's next for Mars and beyond?",
+			"img": "https://res.cloudinary.com/jerrick/image/upload/c_scale,f_jpg,q_auto/66b8be1fd5fa18001dc4d4ee.webp",
+			"views": 1340,
+			"createdAt": "18.07.2023",
+			"userId": "2",
+			"type": ["Science", "Technology"],
 			"blocks": [
 				{
 					"id": "1",
 					"type": "TEXT",
-					"title": "Introduction",
+					"title": "Exploring Mars",
 					"paragraphs": [
-						"JavaScript has become more modular and efficient in 2024, with new tools emerging.",
-						"Frameworks like React and Vue have evolved with new features improving performance."
+						"NASA and private companies are advancing plans for Mars colonization.",
+						"Robotics and AI play a crucial role in space exploration."
 					]
 				}
 			]
 		},
 		{
 			"id": "6",
-			"title": "Sustainable Development in 2024",
-			"subtitle": "How companies are adopting green policies",
-			"img": "https://bcp.cdnchinhphu.vn/344443456812359680/2024/6/27/ptbv-17194785714181041182049.jpg",
-			"views": 1030,
-			"createdAt": "25.09.2023",
+			"title": "Mastering Cybersecurity in 2024",
+			"subtitle": "New threats and how to counter them",
+			"img": "https://i0.wp.com/akitra.com/wp-content/uploads/2024/03/Future-Proofing-Your-Business_-Mastering-Cybersecurity-in-2024.webp?fit=1024%2C1024&ssl=1",
+			"views": 1560,
+			"createdAt": "10.09.2023",
 			"userId": "2",
-			"type": ["Business", "Environment"],
+			"type": ["Technology", "Security"],
 			"blocks": [
 				{
 					"id": "1",
 					"type": "TEXT",
-					"title": "Green Policies",
+					"title": "Emerging Threats",
 					"paragraphs": [
-						"Companies are prioritizing sustainability by reducing carbon emissions.",
-						"Renewable energy sources and eco-friendly practices are driving modern business."
+						"Cyberattacks are becoming more sophisticated with AI-driven tools.",
+						"Organizations need to adopt zero-trust policies to protect data."
 					]
-				},
-				{
-					"id": "2",
-					"type": "IMAGE",
-					"src": "https://u4d2z7k9.rocketcdn.me/wp-content/uploads/2023/07/Untitled-683-%C3%97-1024px-1024-%C3%97-683px-2023-07-12T154605.688.jpg",
-					"title": "Renewable Energy Use"
 				}
 			]
 		},
 		{
 			"id": "7",
-			"title": "AI in Healthcare: A Breakthrough",
-			"subtitle": "Transforming medical diagnostics",
-			"img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFrRgHDZZeI7cI7NaetfEXiQqhpqLS0cpqwg&s",
-			"views": 2100,
-			"createdAt": "05.11.2023",
-			"userId": "1",
-			"type": ["Technology", "Health"],
+			"title": "Climate Change: Actions for a Better Tomorrow",
+			"subtitle": "How individuals and governments can contribute",
+			"img": "https://mljlthywl5qv.i.optimole.com/w:520/h:520/q:mauto/f:best/ig:avif/https://i0.wp.com/camzhu.com/wp-content/uploads/2024/02/rsz_2saveourplanet.jpg?resize=520%2C520&ssl=1",
+			"views": 980,
+			"createdAt": "02.10.2023",
+			"userId": "2",
+			"type": ["Environment", "Policy"],
 			"blocks": [
 				{
 					"id": "1",
 					"type": "TEXT",
-					"title": "AI-Powered Diagnostics",
+					"title": "Key Strategies",
 					"paragraphs": [
-						"Artificial Intelligence helps doctors detect diseases at early stages.",
-						"Machine learning models are improving accuracy in diagnostics."
+						"Governments are introducing stricter emissions regulations.",
+						"Individuals can contribute by reducing energy consumption and supporting green initiatives."
 					]
-				},
-				{
-					"id": "2",
-					"type": "CODE",
-					"code": "const analyzeImage = (img) => {\n  return AIModel.predict(img);\n};"
 				}
 			]
 		},
 		{
 			"id": "8",
-			"title": "Top 10 Travel Destinations for 2024",
-			"subtitle": "Explore the world's hidden gems",
-			"img": "https://i.ytimg.com/vi/OCzzN8VZgfY/maxresdefault.jpg",
-			"views": 870,
-			"createdAt": "22.08.2023",
-			"userId": "2",
-			"type": ["Travel", "Lifestyle"],
+			"title": "The Evolution of Electric Vehicles",
+			"subtitle": "From concept to mass adoption",
+			"img": "https://yocharge.com/wp-content/uploads/2023/02/image-evolution-of-electric-vehicles-yocharge-4-1.jpg",
+			"views": 1120,
+			"createdAt": "15.11.2023",
+			"userId": "1",
+			"type": ["Technology", "Automotive"],
 			"blocks": [
 				{
 					"id": "1",
 					"type": "TEXT",
-					"title": "Travel Trends",
+					"title": "Market Growth",
 					"paragraphs": [
-						"Travel in 2024 focuses on sustainable tourism and cultural experiences.",
-						"Hidden destinations in Asia and South America are gaining popularity."
+						"Electric vehicle sales have surged globally, driven by eco-conscious consumers.",
+						"Battery technology continues to improve, offering greater range and faster charging times."
 					]
-				},
-				{
-					"id": "2",
-					"type": "IMAGE",
-					"src": "https://www.forumdaily.com/wp-content/uploads/2021/09/shutterstock_648072241.jpg",
-					"title": "Tropical Paradise"
 				}
 			]
 		},
 		{
 			"id": "9",
-			"title": "The Rise of JavaScript Frameworks",
-			"subtitle": "What changed in JS in 2024?",
-			"img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-			"views": 1450,
-			"createdAt": "12.10.2023",
+			"title": "The Future of Artificial Intelligence",
+			"subtitle": "Ethics, innovation, and integration",
+			"img": "https://images.javatpoint.com/tutorial/ai/images/future-of-artificial-intelligence.png",
+			"views": 2080,
+			"createdAt": "07.08.2023",
 			"userId": "1",
 			"type": ["Technology"],
 			"blocks": [
 				{
 					"id": "1",
 					"type": "TEXT",
-					"title": "Introduction",
+					"title": "AI and Society",
 					"paragraphs": [
-						"JavaScript has become more modular and efficient in 2024, with new tools emerging.",
-						"Frameworks like React and Vue have evolved with new features improving performance."
+						"AI continues to transform industries, but ethical considerations are paramount.",
+						"Developers must focus on creating transparent and unbiased AI models."
 					]
-				}
-			]
-		},
-		{
-			"id": "10",
-			"title": "Sustainable Development in 2024",
-			"subtitle": "How companies are adopting green policies",
-			"img": "https://bcp.cdnchinhphu.vn/344443456812359680/2024/6/27/ptbv-17194785714181041182049.jpg",
-			"views": 1030,
-			"createdAt": "25.09.2023",
-			"userId": "2",
-			"type": ["Business", "Environment"],
-			"blocks": [
-				{
-					"id": "1",
-					"type": "TEXT",
-					"title": "Green Policies",
-					"paragraphs": [
-						"Companies are prioritizing sustainability by reducing carbon emissions.",
-						"Renewable energy sources and eco-friendly practices are driving modern business."
-					]
-				},
-				{
-					"id": "2",
-					"type": "IMAGE",
-					"src": "https://u4d2z7k9.rocketcdn.me/wp-content/uploads/2023/07/Untitled-683-%C3%97-1024px-1024-%C3%97-683px-2023-07-12T154605.688.jpg",
-					"title": "Renewable Energy Use"
-				}
-			]
-		},
-		{
-			"id": "11",
-			"title": "AI in Healthcare: A Breakthrough",
-			"subtitle": "Transforming medical diagnostics",
-			"img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFrRgHDZZeI7cI7NaetfEXiQqhpqLS0cpqwg&s",
-			"views": 2100,
-			"createdAt": "05.11.2023",
-			"userId": "1",
-			"type": ["Technology", "Health"],
-			"blocks": [
-				{
-					"id": "1",
-					"type": "TEXT",
-					"title": "AI-Powered Diagnostics",
-					"paragraphs": [
-						"Artificial Intelligence helps doctors detect diseases at early stages.",
-						"Machine learning models are improving accuracy in diagnostics."
-					]
-				},
-				{
-					"id": "2",
-					"type": "CODE",
-					"code": "const analyzeImage = (img) => {\n  return AIModel.predict(img);\n};"
-				}
-			]
-		},
-		{
-			"id": "12",
-			"title": "Top 10 Travel Destinations for 2024",
-			"subtitle": "Explore the world's hidden gems",
-			"img": "https://i.ytimg.com/vi/OCzzN8VZgfY/maxresdefault.jpg",
-			"views": 870,
-			"createdAt": "22.08.2023",
-			"userId": "2",
-			"type": ["Travel", "Lifestyle"],
-			"blocks": [
-				{
-					"id": "1",
-					"type": "TEXT",
-					"title": "Travel Trends",
-					"paragraphs": [
-						"Travel in 2024 focuses on sustainable tourism and cultural experiences.",
-						"Hidden destinations in Asia and South America are gaining popularity."
-					]
-				},
-				{
-					"id": "2",
-					"type": "IMAGE",
-					"src": "https://www.forumdaily.com/wp-content/uploads/2021/09/shutterstock_648072241.jpg",
-					"title": "Tropical Paradise"
-				}
-			]
-		},
-		{
-			"id": "13",
-			"title": "The Rise of JavaScript Frameworks",
-			"subtitle": "What changed in JS in 2024?",
-			"img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-			"views": 1450,
-			"createdAt": "12.10.2023",
-			"userId": "1",
-			"type": ["Technology"],
-			"blocks": [
-				{
-					"id": "1",
-					"type": "TEXT",
-					"title": "Introduction",
-					"paragraphs": [
-						"JavaScript has become more modular and efficient in 2024, with new tools emerging.",
-						"Frameworks like React and Vue have evolved with new features improving performance."
-					]
-				}
-			]
-		},
-		{
-			"id": "14",
-			"title": "Sustainable Development in 2024",
-			"subtitle": "How companies are adopting green policies",
-			"img": "https://bcp.cdnchinhphu.vn/344443456812359680/2024/6/27/ptbv-17194785714181041182049.jpg",
-			"views": 1030,
-			"createdAt": "25.09.2023",
-			"userId": "2",
-			"type": ["Business", "Environment"],
-			"blocks": [
-				{
-					"id": "1",
-					"type": "TEXT",
-					"title": "Green Policies",
-					"paragraphs": [
-						"Companies are prioritizing sustainability by reducing carbon emissions.",
-						"Renewable energy sources and eco-friendly practices are driving modern business."
-					]
-				},
-				{
-					"id": "2",
-					"type": "IMAGE",
-					"src": "https://u4d2z7k9.rocketcdn.me/wp-content/uploads/2023/07/Untitled-683-%C3%97-1024px-1024-%C3%97-683px-2023-07-12T154605.688.jpg",
-					"title": "Renewable Energy Use"
-				}
-			]
-		},
-		{
-			"id": "15",
-			"title": "AI in Healthcare: A Breakthrough",
-			"subtitle": "Transforming medical diagnostics",
-			"img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFrRgHDZZeI7cI7NaetfEXiQqhpqLS0cpqwg&s",
-			"views": 2100,
-			"createdAt": "05.11.2023",
-			"userId": "1",
-			"type": ["Technology", "Health"],
-			"blocks": [
-				{
-					"id": "1",
-					"type": "TEXT",
-					"title": "AI-Powered Diagnostics",
-					"paragraphs": [
-						"Artificial Intelligence helps doctors detect diseases at early stages.",
-						"Machine learning models are improving accuracy in diagnostics."
-					]
-				},
-				{
-					"id": "2",
-					"type": "CODE",
-					"code": "const analyzeImage = (img) => {\n  return AIModel.predict(img);\n};"
-				}
-			]
-		},
-		{
-			"id": "16",
-			"title": "Top 10 Travel Destinations for 2024",
-			"subtitle": "Explore the world's hidden gems",
-			"img": "https://i.ytimg.com/vi/OCzzN8VZgfY/maxresdefault.jpg",
-			"views": 870,
-			"createdAt": "22.08.2023",
-			"userId": "2",
-			"type": ["Travel", "Lifestyle"],
-			"blocks": [
-				{
-					"id": "1",
-					"type": "TEXT",
-					"title": "Travel Trends",
-					"paragraphs": [
-						"Travel in 2024 focuses on sustainable tourism and cultural experiences.",
-						"Hidden destinations in Asia and South America are gaining popularity."
-					]
-				},
-				{
-					"id": "2",
-					"type": "IMAGE",
-					"src": "https://www.forumdaily.com/wp-content/uploads/2021/09/shutterstock_648072241.jpg",
-					"title": "Tropical Paradise"
-				}
-			]
-		},
-		{
-			"id": "17",
-			"title": "The Rise of JavaScript Frameworks",
-			"subtitle": "What changed in JS in 2024?",
-			"img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-			"views": 1450,
-			"createdAt": "12.10.2023",
-			"userId": "1",
-			"type": ["Technology"],
-			"blocks": [
-				{
-					"id": "1",
-					"type": "TEXT",
-					"title": "Introduction",
-					"paragraphs": [
-						"JavaScript has become more modular and efficient in 2024, with new tools emerging.",
-						"Frameworks like React and Vue have evolved with new features improving performance."
-					]
-				}
-			]
-		},
-		{
-			"id": "18",
-			"title": "Sustainable Development in 2024",
-			"subtitle": "How companies are adopting green policies",
-			"img": "https://bcp.cdnchinhphu.vn/344443456812359680/2024/6/27/ptbv-17194785714181041182049.jpg",
-			"views": 1030,
-			"createdAt": "25.09.2023",
-			"userId": "2",
-			"type": ["Business", "Environment"],
-			"blocks": [
-				{
-					"id": "1",
-					"type": "TEXT",
-					"title": "Green Policies",
-					"paragraphs": [
-						"Companies are prioritizing sustainability by reducing carbon emissions.",
-						"Renewable energy sources and eco-friendly practices are driving modern business."
-					]
-				},
-				{
-					"id": "2",
-					"type": "IMAGE",
-					"src": "https://u4d2z7k9.rocketcdn.me/wp-content/uploads/2023/07/Untitled-683-%C3%97-1024px-1024-%C3%97-683px-2023-07-12T154605.688.jpg",
-					"title": "Renewable Energy Use"
-				}
-			]
-		},
-		{
-			"id": "19",
-			"title": "AI in Healthcare: A Breakthrough",
-			"subtitle": "Transforming medical diagnostics",
-			"img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFrRgHDZZeI7cI7NaetfEXiQqhpqLS0cpqwg&s",
-			"views": 2100,
-			"createdAt": "05.11.2023",
-			"userId": "1",
-			"type": ["Technology", "Health"],
-			"blocks": [
-				{
-					"id": "1",
-					"type": "TEXT",
-					"title": "AI-Powered Diagnostics",
-					"paragraphs": [
-						"Artificial Intelligence helps doctors detect diseases at early stages.",
-						"Machine learning models are improving accuracy in diagnostics."
-					]
-				},
-				{
-					"id": "2",
-					"type": "CODE",
-					"code": "const analyzeImage = (img) => {\n  return AIModel.predict(img);\n};"
-				}
-			]
-		},
-		{
-			"id": "20",
-			"title": "Top 10 Travel Destinations for 2024",
-			"subtitle": "Explore the world's hidden gems",
-			"img": "https://i.ytimg.com/vi/OCzzN8VZgfY/maxresdefault.jpg",
-			"views": 870,
-			"createdAt": "22.08.2023",
-			"userId": "2",
-			"type": ["Travel", "Lifestyle"],
-			"blocks": [
-				{
-					"id": "1",
-					"type": "TEXT",
-					"title": "Travel Trends",
-					"paragraphs": [
-						"Travel in 2024 focuses on sustainable tourism and cultural experiences.",
-						"Hidden destinations in Asia and South America are gaining popularity."
-					]
-				},
-				{
-					"id": "2",
-					"type": "IMAGE",
-					"src": "https://www.forumdaily.com/wp-content/uploads/2021/09/shutterstock_648072241.jpg",
-					"title": "Tropical Paradise"
-				}
-			]
-		},
-		{
-			"id": "21",
-			"title": "The Rise of JavaScript Frameworks",
-			"subtitle": "What changed in JS in 2024?",
-			"img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-			"views": 1450,
-			"createdAt": "12.10.2023",
-			"userId": "1",
-			"type": ["Technology"],
-			"blocks": [
-				{
-					"id": "1",
-					"type": "TEXT",
-					"title": "Introduction",
-					"paragraphs": [
-						"JavaScript has become more modular and efficient in 2024, with new tools emerging.",
-						"Frameworks like React and Vue have evolved with new features improving performance."
-					]
-				}
-			]
-		},
-		{
-			"id": "22",
-			"title": "Sustainable Development in 2024",
-			"subtitle": "How companies are adopting green policies",
-			"img": "https://bcp.cdnchinhphu.vn/344443456812359680/2024/6/27/ptbv-17194785714181041182049.jpg",
-			"views": 1030,
-			"createdAt": "25.09.2023",
-			"userId": "2",
-			"type": ["Business", "Environment"],
-			"blocks": [
-				{
-					"id": "1",
-					"type": "TEXT",
-					"title": "Green Policies",
-					"paragraphs": [
-						"Companies are prioritizing sustainability by reducing carbon emissions.",
-						"Renewable energy sources and eco-friendly practices are driving modern business."
-					]
-				},
-				{
-					"id": "2",
-					"type": "IMAGE",
-					"src": "https://u4d2z7k9.rocketcdn.me/wp-content/uploads/2023/07/Untitled-683-%C3%97-1024px-1024-%C3%97-683px-2023-07-12T154605.688.jpg",
-					"title": "Renewable Energy Use"
-				}
-			]
-		},
-		{
-			"id": "23",
-			"title": "AI in Healthcare: A Breakthrough",
-			"subtitle": "Transforming medical diagnostics",
-			"img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFrRgHDZZeI7cI7NaetfEXiQqhpqLS0cpqwg&s",
-			"views": 2100,
-			"createdAt": "05.11.2023",
-			"userId": "1",
-			"type": ["Technology", "Health"],
-			"blocks": [
-				{
-					"id": "1",
-					"type": "TEXT",
-					"title": "AI-Powered Diagnostics",
-					"paragraphs": [
-						"Artificial Intelligence helps doctors detect diseases at early stages.",
-						"Machine learning models are improving accuracy in diagnostics."
-					]
-				},
-				{
-					"id": "2",
-					"type": "CODE",
-					"code": "const analyzeImage = (img) => {\n  return AIModel.predict(img);\n};"
-				}
-			]
-		},
-		{
-			"id": "24",
-			"title": "Top 10 Travel Destinations for 2024",
-			"subtitle": "Explore the world's hidden gems",
-			"img": "https://i.ytimg.com/vi/OCzzN8VZgfY/maxresdefault.jpg",
-			"views": 870,
-			"createdAt": "22.08.2023",
-			"userId": "2",
-			"type": ["Travel", "Lifestyle"],
-			"blocks": [
-				{
-					"id": "1",
-					"type": "TEXT",
-					"title": "Travel Trends",
-					"paragraphs": [
-						"Travel in 2024 focuses on sustainable tourism and cultural experiences.",
-						"Hidden destinations in Asia and South America are gaining popularity."
-					]
-				},
-				{
-					"id": "2",
-					"type": "IMAGE",
-					"src": "https://www.forumdaily.com/wp-content/uploads/2021/09/shutterstock_648072241.jpg",
-					"title": "Tropical Paradise"
-				}
-			]
-		},
-		{
-			"id": "25",
-			"title": "The Rise of JavaScript Frameworks",
-			"subtitle": "What changed in JS in 2024?",
-			"img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
-			"views": 1450,
-			"createdAt": "12.10.2023",
-			"userId": "1",
-			"type": ["Technology"],
-			"blocks": [
-				{
-					"id": "1",
-					"type": "TEXT",
-					"title": "Introduction",
-					"paragraphs": [
-						"JavaScript has become more modular and efficient in 2024, with new tools emerging.",
-						"Frameworks like React and Vue have evolved with new features improving performance."
-					]
-				}
-			]
-		},
-		{
-			"id": "26",
-			"title": "Sustainable Development in 2024",
-			"subtitle": "How companies are adopting green policies",
-			"img": "https://bcp.cdnchinhphu.vn/344443456812359680/2024/6/27/ptbv-17194785714181041182049.jpg",
-			"views": 1030,
-			"createdAt": "25.09.2023",
-			"userId": "2",
-			"type": ["Business", "Environment"],
-			"blocks": [
-				{
-					"id": "1",
-					"type": "TEXT",
-					"title": "Green Policies",
-					"paragraphs": [
-						"Companies are prioritizing sustainability by reducing carbon emissions.",
-						"Renewable energy sources and eco-friendly practices are driving modern business."
-					]
-				},
-				{
-					"id": "2",
-					"type": "IMAGE",
-					"src": "https://u4d2z7k9.rocketcdn.me/wp-content/uploads/2023/07/Untitled-683-%C3%97-1024px-1024-%C3%97-683px-2023-07-12T154605.688.jpg",
-					"title": "Renewable Energy Use"
-				}
-			]
-		},
-		{
-			"id": "27",
-			"title": "AI in Healthcare: A Breakthrough",
-			"subtitle": "Transforming medical diagnostics",
-			"img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFrRgHDZZeI7cI7NaetfEXiQqhpqLS0cpqwg&s",
-			"views": 2100,
-			"createdAt": "05.11.2023",
-			"userId": "1",
-			"type": ["Technology", "Health"],
-			"blocks": [
-				{
-					"id": "1",
-					"type": "TEXT",
-					"title": "AI-Powered Diagnostics",
-					"paragraphs": [
-						"Artificial Intelligence helps doctors detect diseases at early stages.",
-						"Machine learning models are improving accuracy in diagnostics."
-					]
-				},
-				{
-					"id": "2",
-					"type": "CODE",
-					"code": "const analyzeImage = (img) => {\n  return AIModel.predict(img);\n};"
-				}
-			]
-		},
-		{
-			"id": "28",
-			"title": "Top 10 Travel Destinations for 2024",
-			"subtitle": "Explore the world's hidden gems",
-			"img": "https://i.ytimg.com/vi/OCzzN8VZgfY/maxresdefault.jpg",
-			"views": 870,
-			"createdAt": "22.08.2023",
-			"userId": "2",
-			"type": ["Travel", "Lifestyle"],
-			"blocks": [
-				{
-					"id": "1",
-					"type": "TEXT",
-					"title": "Travel Trends",
-					"paragraphs": [
-						"Travel in 2024 focuses on sustainable tourism and cultural experiences.",
-						"Hidden destinations in Asia and South America are gaining popularity."
-					]
-				},
-				{
-					"id": "2",
-					"type": "IMAGE",
-					"src": "https://www.forumdaily.com/wp-content/uploads/2021/09/shutterstock_648072241.jpg",
-					"title": "Tropical Paradise"
 				}
 			]
 		}
