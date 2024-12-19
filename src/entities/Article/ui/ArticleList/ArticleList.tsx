@@ -4,6 +4,8 @@ import { ArticleListItem } from "../ArticleListItem/ArticleListItem";
 import { ArticleListItemSkeleton } from "../ArticleListItem/ArticleListItemSkeleton";
 import { classNames } from "shared/lib/classNames/classNames";
 import css from "./ArticleList.module.scss";
+import { Text, TextSize } from "shared/ui/Text/Text";
+import { useTranslation } from "react-i18next";
 
 interface ArticleListProps {
 	className?: string;
@@ -26,6 +28,7 @@ const getSkeletons = (view: ArticleView) => {
 
 export const ArticleList = (props: ArticleListProps) => {
 	const { className, articles, isLoading, view = ArticleView.SMALL } = props;
+	const { t } = useTranslation();
 
 	const renderArticle = (article: Article) => {
 		return (
@@ -37,6 +40,21 @@ export const ArticleList = (props: ArticleListProps) => {
 			/>
 		);
 	};
+
+	if (!isLoading && !articles.length) {
+		return (
+			<div
+				className={classNames(css.ArticleList, {}, [
+					className,
+					css[view],
+				])}>
+				<Text
+					size={TextSize.L}
+					title={t("Article not found")}
+				/>
+			</div>
+		);
+	}
 
 	return (
 		<div

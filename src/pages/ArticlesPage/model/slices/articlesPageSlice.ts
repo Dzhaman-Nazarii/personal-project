@@ -4,7 +4,12 @@ import {
 	PayloadAction,
 } from "@reduxjs/toolkit";
 import { StateSchema } from "app/providers/StoreProvider";
-import { Article, ArticleView, ArticleSortField } from "entities/Article";
+import {
+	Article,
+	ArticleView,
+	ArticleSortField,
+	ArticleType,
+} from "entities/Article";
 import { ArticlePageSchema } from "../types/articlesPageSchema";
 import { fetchArticlesList } from "../services/fetchArticlesList/fetchArticlesList";
 import { ARTICLES_VIEW_LOCALSTORAGE_KEY } from "shared/const/localStorage";
@@ -33,6 +38,7 @@ const articlesPageSlice = createSlice({
 		sort: ArticleSortField.CREATED,
 		search: "",
 		order: "asc",
+		type: ArticleType.ALL,
 	}),
 	reducers: {
 		setView: (state, action: PayloadAction<ArticleView>) => {
@@ -54,6 +60,9 @@ const articlesPageSlice = createSlice({
 		setSearch: (state, action: PayloadAction<string>) => {
 			state.search = action.payload;
 		},
+		setType: (state, action: PayloadAction<ArticleType>) => {
+			state.type = action.payload;
+		},
 		initState: (state) => {
 			const view = localStorage.getItem(
 				ARTICLES_VIEW_LOCALSTORAGE_KEY
@@ -68,7 +77,7 @@ const articlesPageSlice = createSlice({
 			.addCase(fetchArticlesList.pending, (state, action) => {
 				state.error = undefined;
 				state.isLoading = true;
-				if(action.meta.arg.replace) {
+				if (action.meta.arg.replace) {
 					articlesAdapter.removeAll(state);
 				}
 			})
