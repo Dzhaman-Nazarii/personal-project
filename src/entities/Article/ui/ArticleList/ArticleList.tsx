@@ -1,4 +1,4 @@
-import React from "react";
+import React, { HTMLAttributeAnchorTarget } from "react";
 import { Article, ArticleView } from "../../model/types/articles";
 import { ArticleListItem } from "../ArticleListItem/ArticleListItem";
 import { ArticleListItemSkeleton } from "../ArticleListItem/ArticleListItemSkeleton";
@@ -12,6 +12,7 @@ interface ArticleListProps {
 	articles: Article[];
 	isLoading?: boolean;
 	view?: ArticleView;
+	target?: HTMLAttributeAnchorTarget;
 }
 
 const getSkeletons = (view: ArticleView) => {
@@ -27,13 +28,14 @@ const getSkeletons = (view: ArticleView) => {
 };
 
 export const ArticleList = (props: ArticleListProps) => {
-	const { className, articles, isLoading, view = ArticleView.SMALL } = props;
+	const { className, articles, isLoading, view = ArticleView.SMALL, target } = props;
 	const { t } = useTranslation();
 
 	const renderArticle = (article: Article) => {
 		return (
 			<ArticleListItem
 				className={css.card}
+				target={target}
 				key={article.id}
 				article={article}
 				view={view}

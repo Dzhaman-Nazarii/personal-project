@@ -15,23 +15,20 @@ import { Button, ButtonTheme } from "shared/ui/Button/Button";
 import { useTranslation } from "react-i18next";
 import { ArticleTextBlockComponent } from "../ArticleTextBlockComponent/ArticleTextBlockComponent";
 import { useNavigate } from "react-router-dom";
-import React, { useCallback } from "react";
+import React, { HTMLAttributeAnchorTarget, useCallback } from "react";
 import { RoutePath } from "shared/config/routeConfig/routeConfig";
+import { AppLink } from "shared/ui/AppLink/AppLink";
 
 interface ArticleListItemProps {
 	className?: string;
 	article: Article;
 	view: ArticleView;
+	target?: HTMLAttributeAnchorTarget;
 }
 
 export const ArticleListItem = (props: ArticleListItemProps) => {
-	const { className, article, view } = props;
+	const { className, article, view, target } = props;
 	const { t } = useTranslation();
-	const navigate = useNavigate();
-
-	const onOpenArticle = useCallback(() => {
-		navigate(RoutePath.article_details + article.id);
-	}, [navigate, article.id]);
 
 	if (view === ArticleView.BIG) {
 		let textBlock = article.blocks.find(
@@ -78,11 +75,13 @@ export const ArticleListItem = (props: ArticleListItemProps) => {
 						/>
 					)}
 					<div className={css.footer}>
-						<Button
-							onClick={onOpenArticle}
-							theme={ButtonTheme.OUTLINE}>
-							{t("Read more...")}
-						</Button>
+						<AppLink
+							target={target}
+							to={RoutePath.article_details + article.id}>
+							<Button theme={ButtonTheme.OUTLINE}>
+								{t("Read more...")}
+							</Button>
+						</AppLink>
 						<Text
 							text={String(article.views)}
 							className={css.views}
@@ -94,14 +93,14 @@ export const ArticleListItem = (props: ArticleListItemProps) => {
 		);
 	}
 	return (
-		<div
+		<AppLink
+			target={target}
+			to={RoutePath.article_details + article.id}
 			className={classNames(css.ArticleListItem, {}, [
 				className,
 				css[view],
 			])}>
-			<Card
-				className={css.card}
-				onClick={onOpenArticle}>
+			<Card className={css.card}>
 				<div className={css.imageWrapper}>
 					<img
 						src={article.img}
@@ -124,11 +123,11 @@ export const ArticleListItem = (props: ArticleListItemProps) => {
 					/>
 					<Icon Svg={EyeIcon} />
 				</div>
+				<Text
+					text={article.title}
+					className={css.title}
+				/>
 			</Card>
-			<Text
-				text={article.title}
-				className={css.title}
-			/>
-		</div>
+		</AppLink>
 	);
 };
