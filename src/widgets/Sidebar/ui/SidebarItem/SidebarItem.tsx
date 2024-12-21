@@ -1,6 +1,5 @@
 import React from "react";
 import { AppLink, AppLinkTheme } from "shared/ui/AppLink/AppLink";
-import { useTranslation } from "react-i18next";
 import css from "./SidebarItem.module.scss";
 import { classNames } from "shared/lib/classNames/classNames";
 import { useSelector } from "react-redux";
@@ -13,7 +12,6 @@ interface SidebarItemProps {
 }
 
 export const SidebarItem = ({ item, collapsed }: SidebarItemProps) => {
-	const { t } = useTranslation();
 
 	const isAuth = useSelector(getUserAuthData);
 
@@ -27,7 +25,7 @@ export const SidebarItem = ({ item, collapsed }: SidebarItemProps) => {
 			theme={AppLinkTheme.SECONDARY}
 			to={item.path}>
 			<item.Icon className={css.icon} />
-			<span className={css.link}>{t(item.text)}</span>
+			<span className={css.link}>{item.text}</span>
 		</AppLink>
 	) : null;
 };
