@@ -16,7 +16,7 @@ export default (env: BuildEnv) => {
 	const PORT = env.port || 3000;
 	const mode = env.mode || "development";
 	const isDev = mode === "development";
-	const apiUrl = env.apiUrl || "http://localhost:8000";
+	const apiUrl = env.apiUrl || "https://personal-project-backend-beryl.vercel.app";
 
 	const config: Configuration = buildWebpackConfig({
 		mode,
